@@ -47,10 +47,15 @@ Indice: vous pouvez vous aider de la "concaténation" (https://developer.mozilla
 
 // <!----- NE PAS TOUCHER - UTILISER POUR LES TESTS ------------!>
 module.exports = {};
-module.exports.firstName = firstName;
-module.exports.lastName = lastName;
-module.exports.age = age;
-module.exports.city = city;
-module.exports.birthday = birthday;
-module.exports.changeCity = changeCity;
-module.exports.fullName = fullName;
+module.exports.firstName =
+  typeof firstName !== "undefined" ? firstName : undefined;
+module.exports.lastName =
+  typeof lastName !== "undefined" ? lastName : undefined;
+module.exports.age = typeof age !== "undefined" ? age : undefined;
+module.exports.city = typeof city !== "undefined" ? city : undefined;
+module.exports.birthday =
+  typeof birthday !== "undefined" ? birthday : undefined;
+module.exports.changeCity =
+  typeof changeCity !== "undefined" ? changeCity : undefined;
+module.exports.fullName =
+  typeof fullName !== "undefined" ? fullName : undefined;
